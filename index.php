@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Last.fm top albums patchwork generator</title>
+        <title>Last Nine — a Last.fm personal chart picture generator</title>
         <meta charset="utf-8" />
         <meta name="description" content="A tool that generates a patchwork, an image, based on the covers of your Last.fm top albums. It's simple, free, and it works." />
         <meta name="keywords" content="lastfm top albums generator, last.fm top albums generator, lastfm top albums, last.fm top albums, lastfm, last.fm, top albums" />
         <link href="main.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <header>Last.fm top albums patchwork generator</header>
+        <h1>Last Nine</h1>
+        <h3>A Last.fm personal chart picture generator</h3>
         <div id="content">
             <form action="patchwork.php" method="GET">
                 <p>
