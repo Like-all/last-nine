@@ -67,8 +67,8 @@ unset($imageUrl);
 
 // srsbsns: create our albums patchwork \o/
 (isset($imagesSize)) ? $imagesSideSize = $imagesSize : $imagesSideSize = 99;
-$PatchworkWidth = $imagesSideSize * $cols + ($cols - 1); // 299 is the max size of the Last.fm profile left column ;)
-$PatchworkHeight = $imagesSideSize * $rows + ($rows - 1);
+$PatchworkWidth = $imagesSideSize * $cols; // 299 is the max size of the Last.fm profile left column ;)
+$PatchworkHeight = $imagesSideSize * $rows;
 
 // create the "empty" patchwork
 $patchwork = imagecreatetruecolor($PatchworkWidth, $PatchworkHeight);
