@@ -1,0 +1,18 @@
+
+server {
+        listen 80;
+        server_name _;
+
+        root /var/www/last-nine;
+        index index.php;
+
+        location / {
+          root /var/www/last-nine;
+        }
+
+        location ~ \.php$ {
+                include /etc/nginx/fastcgi_params;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+                fastcgi_pass unix:/tmp/fpm.sock;
+        }
+}
