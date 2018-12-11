@@ -26,30 +26,6 @@
                     </select>
                 </p>
                 <p>
-                    <label for="rows">Nr. of rows</label>
-                    <select name="rows" id="rows">
-                        <?php for ($i=1; $i<=20; $i++) : ?>
-                        <option value="<?php echo $i; ?>" <?php echo ($i==3) ? "selected='selected'" : ""; ?>>
-                            <?php echo $i; ?>
-                        </option>
-                        <?php endfor; ?>
-                    </select>
-                </p>
-                <p>
-                    <label for="cols">Nr. of columns</label>
-                    <select name="cols" id="cols">
-                        <?php for ($i=1; $i<=20; $i++) : ?>
-                        <option value="<?php echo $i; ?>" <?php echo ($i==3) ? "selected='selected'" : ""; ?>>
-                            <?php echo $i; ?>
-                        </option>
-                        <?php endfor; ?>
-                    </select>
-                </p>
-                <p>
-                    <label for="imageSize">Images size</label>
-                    <input type="text" value="360" name="imageSize" id="imagesSize" /> px
-                </p>
-                <p>
                     <input type="submit" id="submit" value="Generate!" />
                 </p>
             </form>
