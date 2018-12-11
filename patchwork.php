@@ -11,9 +11,9 @@ $method = "user.gettopalbums";
 
 $user       = $_GET["user"];
 $period     = $_GET["period"];
-$rows       = $_GET["rows"];
-$cols       = $_GET["cols"];
-$imagesSize = $_GET["imageSize"];
+$rows       = 3;
+$cols       = 3;
+$imagesSize = 360;
 // Get 5 more albums incase there isn't an available
 // image for one of the requested albums #lazyhackftw
 $limit      = ($cols * $rows) + 5;
@@ -85,8 +85,8 @@ for ($i=0; $i<$rows; $i++) {
 }
 
 // save the image into a file
-imagejpeg($patchwork, $fileName);
+imagepng($patchwork, $fileName);
 
 // display the image
-header("Content-type: image/jpg");
-imagejpeg($patchwork);
+header("Content-type: image/png");
+imagepng($patchwork);
