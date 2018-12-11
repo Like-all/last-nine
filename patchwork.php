@@ -5,7 +5,7 @@ if (!isset($_GET) || empty($_GET)) {
     exit;
 }
 
-$apiUrl = "http://ws.audioscrobbler.com/2.0/";
+$apiUrl = "https://ws.audioscrobbler.com/2.0/";
 $apiKey = "61d580c50e6e5e3f14b6bd9527e5395f";
 $method = "user.gettopalbums";
 
