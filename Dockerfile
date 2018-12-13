@@ -2,7 +2,7 @@ FROM debian:stable-slim
 
 COPY . /var/www/last-nine/
 RUN apt-get update && \
-    apt-get -y install nginx php-fpm php-gd php-xml php-curl supervisor && \
+    apt-get -y install nginx php-fpm php-gd php-xml php-curl php-json supervisor && \
     apt-get clean
 COPY docker-helpers/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 COPY docker-helpers/nginx/default /etc/nginx/sites-available/default
