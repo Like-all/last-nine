@@ -7,19 +7,19 @@ if (!isset($_GET) || empty($_GET)) {
 
 $apiUrl = "https://ws.audioscrobbler.com/2.0/";
 $apiKey = "61d580c50e6e5e3f14b6bd9527e5395f";
-$method = "user.gettopalbums";
+$method = "user.gettopartists";
 
 $user       = $_GET["user"];
 $period     = $_GET["period"];
 $rows       = 3;
 $cols       = 3;
 $imagesSize = 360;
-// Get 5 more albums incase there isn't an available
-// image for one of the requested albums #lazyhackftw
+// Get 5 more artists incase there isn't an available
+// image for one of the requested artists #lazyhackftw
 $limit      = ($cols * $rows) + 5;
 
 // create the url
-$query = "$apiUrl?method=$method&user=$user&period=$period&limit=$limit&api_key=$apiKey";
+$query = "$apiUrl?method=$method&user=$user&period=$period&limit=$limit&api_key=$apiKey&format=json";
 
 // check if the image isn't already loaded
 $response     = file_get_contents($query);
