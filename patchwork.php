@@ -61,7 +61,7 @@ foreach($imagesUrlsList as $imageUrl){
 }
 unset($imageUrl);
 
-// srsbsns: create our albums patchwork \o/
+// srsbsns: create our artists patchwork \o/
 (isset($imagesSize)) ? $imagesSideSize = $imagesSize : $imagesSideSize = 99;
 $PatchworkWidth = $imagesSideSize * $cols; // 299 is the max size of the Last.fm profile left column ;)
 $PatchworkHeight = $imagesSideSize * $rows;
