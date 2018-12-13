@@ -33,16 +33,12 @@ if (file_exists($fileName)) {
     exit;
 }
 
-// create a DOMDocument which will contain the information returned by Last.fm's Web service
-$topAlbums = new DOMDocument();
-$topAlbums->load($query);
-
 // get the images' urls
 $imagesUrlsList = array();
-$topAlbumsList = $topAlbums->getElementsByTagName("album");
+$topArtists = json_decode($response);
+
 for ($i=0; $i<$limit; $i++) {
-    if (!preg_match('/default_album/', $topAlbumsList->item($i)->getElementsByTagName("image")->item(3)->nodeValue))
-        $imagesUrlsList[] = $topAlbumsList->item($i)->getElementsByTagName("image")->item(3)->nodeValue;
+  $imagesUrlsList[] = $topArtists->topartists->artist[$i]->image[4]->{'#text'};
 }
 
 // create the images
